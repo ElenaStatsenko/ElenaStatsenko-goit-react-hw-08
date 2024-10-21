@@ -1,8 +1,8 @@
 import { createSlice, createSelector } from "@reduxjs/toolkit";
-import { initialValues } from "../data";
-import { fetchContacts, addContacts, deleteContacts } from "./contactsOps";
-import { selectNameFilter } from "./filtersSlice";
+import { initialValues } from "../../data";
 
+import { selectNameFilter } from "../filters.js/selectors";
+import { fetchContacts, addContacts,deleteContacts } from "./operations";
 
 const contactsSlice = createSlice({
   // Ім'я слайсу
@@ -78,11 +78,3 @@ export const selectVisibleContacts = createSelector(
     );
   }
 );
-// export const selectVisibleContacts =(state) => {
-//   const contacts = selectGetContacts(state);
-//   const filterContact = selectNameFilter(state);
-
-//   return contacts.filter((contact) =>
-//     contact.name.toLowerCase().includes(filterContact.toLowerCase())
-//   );
-// }

@@ -2,9 +2,9 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import Contact from "../Contact/Contact";
 
-import { deleteContacts } from "../../redax/contactsOps";
+import { deleteContacts } from "../../redax/contacts/operations";
 
-import { selectVisibleContacts } from "../../redax/contactsSlice";
+import { selectVisibleContacts } from "../../redax/contacts/slice";
 
 export default function ContactList() {
   const dispatch = useDispatch();

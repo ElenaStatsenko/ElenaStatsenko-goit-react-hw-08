@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import ContactForm from "../ContactForm/ContactForm";
 import ContactList from "../ContactList/ContactList";
 import SearchBox from "../SearchBox/SearchBox";
-import { fetchContacts } from "../../redax/contactsOps";
-import { selectGetIsLoading } from "../../redax/contactsSlice";
-import { selectGetError } from "../../redax/contactsSlice";
+import { fetchContacts } from "../../redax/contacts/operations";
+import { selectGetIsLoading } from "../../redax/contacts/slice";
+import { selectGetError } from "../../redax/contacts/slice";
 
 export default function App() {
   const dispatch = useDispatch();
