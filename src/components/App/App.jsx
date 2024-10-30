@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ContactForm from "../ContactForm/ContactForm";
 import ContactList from "../ContactList/ContactList";
 import SearchBox from "../SearchBox/SearchBox";
+import { Layout } from "../Layout";
 import { fetchContacts } from "../../redax/contacts/operations";
 import { selectGetIsLoading } from "../../redax/contacts/slice";
 import { selectGetError } from "../../redax/contacts/slice";
@@ -16,7 +17,9 @@ export default function App() {
   }, [dispatch]);
 
   return (
+    
     <div>
+      <Layout/>
       <h1>Phonebook</h1>
 
       <ContactForm />
